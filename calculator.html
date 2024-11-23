@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustBank - Homepage</title>
+    <title>TrustBank - Mortgage calculator</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,38 +42,36 @@
             </div>
     </nav>
 
-    <main id="index">
-        <div class="quote">
-            <p>A bank that you<br>can always trust.</p>
+    <main id="mortgage_page">
+        <div class="mortgage_title">
+            <h1>Mortgage calculator</h1>
         </div>
-        <div class="mortgage_box">
-            <p>Try our mortgage<br>calculator today!</p>
-            <a href="calculator.html">Click here!</a>
+        <div class = "calculator_description">
+            <p>Enter correct details here and we will <br> calculate the monthly payment for you:</p>
         </div>
+        <form class="inputs">
+            <div>
+                <label for="loan_amount">loan amount</label>
+                <input type="number" id="loan_amount">
+            </div>
+            <div>
+                <label for="loan_term">loan term (years)</label>
+                <input type="number" id="loan_term">
+            </div>
+            <div>
+                <label for="monthly_income">monthly income (optional)</label>
+                <input type="number" id="monthly_income">
+            </div>
+            <button type="button" id ="calculate_button">calculate</button>
+        </form>
+            <div class="mortgage_breakdown">
+                    <h2>Mortgage Breakdown</h2>
+                    <p>The monthly payment is: <span id = "monthly_payment"> N/A</span></p>
+                    <p>The total payment is: <span id = "total_payment"> N/A</span></p>
+                    <p>The total interest is: <span id = "total_interest"> N/A</span></p>
+                    <p>The remaining income after expenses is: <span id = "remaining_income"> N/A</span></p>
+            </div>
+            <div class="mortgage_image">
+                <img src="/images/Mortgage_picture.jpg" alt="Picture" />
+            </div>
     </main>
-
-    <section>
-        <div class="overview_banner">
-            <div class="banner_title">
-                <h1>Overview <br> of services</h1>
-            </div>
-            <div class="mortgage_text">
-                <h1>Mortgages & loans</h1>
-                <p>We offer a wide range of mortgages <br> and loans that will suit <br> all of your financial needs.</p>
-            </div>
-            <div class="online_banking_text">
-                <h1>online banking</h1>
-                <p>We have a safe and secure <br> online banking system that is <br> easily accessible and quick to use.</p>           
-            </div>
-            <div class="savings_text">
-                <h1>savings</h1>
-                <p>Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. <br> Illo fugiat reiciendis in et nobis vel minus voluptate</p>            
-            </div>
-            <div class="card_text">
-                <h1>Deposit & credit cards</h1>
-                <p>Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. <br> Illo fugiat reiciendis in et nobis vel minus voluptate</p>            
-            </div>
-        </div>
-    </section>
-</body>
-</html>

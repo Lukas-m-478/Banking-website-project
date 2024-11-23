@@ -1,45 +1,480 @@
 * {
-    margin: 0;             
+    margin: 0;     
+    padding: 0;      
 }
+
+body {
+    overflow: scroll;
+    background-size: cover;
+    background-image: url(/images/background_image.jpg);
+}
+
+#index {
+    background-image: url(/images/hero_picture.jpg); 
+    border: 3px solid;
+    height: 50vh;
+    width: 100vh;
+    overflow: hidden;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5vh;
+    margin-left: 40vh;
+}
+
+/* font from google fonts */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* homepage code */
 
 .navbar {
     background-color: #d97368;
-    padding: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
-
-.logo {
-    display: flex;                     
-    justify-content: space-between;     
-    align-items: center;                
-    width: 100%; 
-    background-color: aquamarine;                      
-}
-
+                     
 .logo a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
+    font-family: "Bebas Neue", sans-serif;
     text-decoration: none;
-    color: azure;
-    background-color: black;
+    color: white;
 }
 
 .links a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    color: white;
+    font-size: 25px;
     text-decoration: none;
+    margin-right: 10px;
     display: flex;
-    list-style: none;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .links ul { 
+    list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none; 
-    gap: 20px;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.links li { 
-    padding:10px;
+.quote {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 35px;
+    margin-left: 47vh;
+    margin-top: 8vh;
+    border-radius: 10px;
+    max-width: 30vh;
+    padding-left: 5px;
+    padding-bottom: 4px;
 }
+
+.mortgage_box {
+    color: white;
+    margin-left: 11vh;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    max-width: 18vh;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d97368;
+    margin-top:-105px;
+}
+
+.mortgage_box a{
+    color: #181209;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.overview_banner {
+    display:flex;
+    margin-top: 40px;
+    background-color: #d97368;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-evenly;
+}
+
+.banner_title {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.mortgage_text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+}
+
+.online_banking_text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+}
+
+.savings_text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+}
+
+.card_text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+}
+
+/* mortgage page code */
+
+.mortgage_title h1{
+    margin-left: 68vh;
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: underline;
+    color: black;
+}
+
+.calculator_description {
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 17vh;
+    margin-top: 12vh;
+}
+
+.mortgage_breakdown {
+    margin-left: 122vh;
+    margin-top: -35vh;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    border: solid 3px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 40vh;
+    background-color: #d97368;
+}
+
+.inputs {
+    display: flex;
+    background-color: #d97368;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 30px;
+    margin-left: 15vh;
+    border: solid 3px;
+    border-radius: 10px;
+    max-width: 30vh;   
+}
+
+#calculate_button {
+    max-width: 80px;
+    margin-left: 20vh;
+    z-index: 10;
+}
+
+.mortgage_image img{
+   width: 70vh;
+   height: 50vh;
+   max-height: 40vh;
+   max-width: 50vh;
+   margin-left: 60vh;
+   margin-top: -37vh;
+   border-radius: 10px;
+}
+
+/* FAQ page code */ 
+
+.faq_title {
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 70vh;
+    text-decoration: underline;
+}
+
+.faq_description {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 50px;
+    float: left;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d97368;
+    color: white;
+}
+
+.question_1 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 125px;
+    left: 425px;
+}
+
+.q1_header {
+    background-color: #d97368;
+    padding: 10px;
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.q1_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.question_2 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 325px;
+    left: 425px;
+}
+
+.q2_header {
+    background-color: #d97368;
+    padding: 10px;
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.q2_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.question_3 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 525px;
+    left: 425px;
+}
+
+.q3_header {
+    background-color: #d97368;
+    padding: 10px;
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.q3_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.question_4 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 125px;
+    left: 800px;
+}
+
+.q4_header {
+    background-color: #d97368;
+    padding: 10px; 
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.q4_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.question_5 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 325px;
+    left: 800px;
+}
+
+.q5_header {
+    background-color: #d97368;
+    padding: 10px; 
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.q5_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+.question_6 {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 525px;
+    left: 800px;
+}
+
+.q6_header {
+    background-color: #d97368;
+    padding: 10px;
+    cursor:pointer;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.q6_text {
+    display: none;
+    opacity:0;
+    background-color:#b3564c;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+}
+
+/* services page code */
+
+.services_paragraph {
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 60vh;
+}
+
+.services_title {
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: underline;
+    margin-left: 70vh;
+}
+
+.services_banner {
+    display:flex;
+    margin-top: 60vh;
+    background-color: #d97368;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-evenly;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.service_1_text   {
+    position: absolute;
+    top: 35vh;
+    left: 20vh;
+    opacity: 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d97368;
+}
+
+.service_2_text   {
+    position: absolute;
+    top: 35vh;
+    left: 50vh;
+    opacity: 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d97368;
+}
+
+.service_3_text   {
+    position: absolute;
+    top: 35vh;
+    left: 80vh;
+    opacity: 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d97368;
+}
+
+.service_4_text   {
+    position: absolute;
+    top: 35vh;
+    left:110vh;
+    opacity: 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d97368;
+}
+
+.service_5_text   {
+    position: absolute;
+    top: 35vh;
+    left: 140vh;
+    opacity: 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d97368;
+}
+
+.service_1_header {
+    cursor: pointer;
+}
+
+.service_2_header {
+    cursor: pointer;
+}
+
+.service_3_header {
+    cursor: pointer;
+}
+
+.service_4_header {
+    cursor: pointer;
+}
+
+.service_5_header {
+    cursor: pointer;
+}
+
+.services_paragraph {
+    font-family: "Bebas Neue", sans-serif;
+    position: absolute; 
+    top: 17vh;
+    left: 63vh; 
+    margin: 0; 
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*about us page code*/
+
+.about_us_title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 70vh;
+}
+
+/* contact us page code */
+
+
+
