@@ -48,13 +48,13 @@ $(document).ready(function() {
         $("#remaining_income").text(`N/A`);
 
         //checks for invalid inputs
-        if (isNaN(loan_amount) || isNaN(monthly_income) || isNaN(loan_term)) {
-            alert("Invalid, values must be numeric")
+        if (isNaN(loan_amount) || isNaN(loan_term)) {
+            alert("Invalid, values must be numeric.")
             return;
         }
 
-        if (loan_amount <= 0 || monthly_income <= 0 || loan_term <= 0) {
-            alert("Invalid, values cannot be negative")
+        if (loan_amount <= 0 || loan_term <= 0) {
+            alert("Invalid, values cannot be negative.")
             return;
         }
         //calculates the needed values
@@ -65,11 +65,17 @@ $(document).ready(function() {
         // Gets rid of decimals
         monthly_payment = monthly_payment | 0
         
+        //checks if user entered a valid monthly income then 
         //does eligibility check and displays output as an alert
-        if (monthly_payment > (0.3*monthly_income)) {
-            alert(`Your monthly payment is £${monthly_payment} but it is unaffordable`)
-        } else{
-            alert(`Your monthly payment is £${monthly_payment} and it is affordable`)
+        if (!isNaN(monthly_income) && monthly_income >= 0) {
+            if (monthly_payment > (0.3*monthly_income)) {
+                alert(`Your monthly payment is £${monthly_payment} but it is unaffordable.`)
+            } else{
+                alert(`Your monthly payment is £${monthly_payment} and it is affordable.`)
+            }
+        //this alert pops up if user does not enter a valid monthly income, as it is optional
+        } else {
+            alert(`Your monthly payment is £${monthly_payment}, to calculate remaining expenses and to see if the mortgage is affordable, enter your monthly income.`)
         }
        
         // calculates needed values
@@ -89,9 +95,65 @@ $(document).ready(function() {
 
     //FAQ page code
 
+    $(".q1_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
+    $(".q2_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
+    $(".q3_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
+    $(".q4_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+  
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
+    $(".q5_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
+    $(".q6_header").hover(function() {
+        $(this).css("background-color", "#e29a92");
+    },
+   
+    function() {
+        $(this).css("background-color", "#d97368");
+    }
+    );
+
     //Q1
     //code is re-used here here so it will be explained once
     $(".q1_header").click(function() {
+        //when user clicks on header, colour goes back to
+        //original state
+        $(this).css("background-color", "#d97368");
         //gets width of question 1 div
         var width = $(".question_1").width();
         //checks if the width of div is at original state
@@ -130,32 +192,34 @@ $(document).ready(function() {
     });
     //Q2
     $(".q2_header").click(function() {
-    var width = $(".question_2").width();
+        var width = $(".question_2").width();
+        $(this).css("background-color", "#d97368");
     
-    if (width === 200 ) {
-        $(".question_2").animate({
-            width: '350px',
-            height: '200px'
-        }, 1000)
-        $(".q2_text").show().animate({
-            opacity: '1'
-        },1000);  
-    } else {
-        $(".question_2").animate({
-            width: '200px',
-            height: '100px'
-        }, 1000)
-        $(".q2_text").show().animate({
-            opacity: '0',
-        },1000);
-    }
-      
-    });
+        if (width === 200 ) {
+            $(".question_2").animate({
+                width: '350px',
+                height: '200px'
+            }, 1000)
+            $(".q2_text").show().animate({
+                opacity: '1'
+            },1000);  
+        } else {
+            $(".question_2").animate({
+                width: '200px',
+                height: '100px'
+            }, 1000)
+            $(".q2_text").show().animate({
+                opacity: '0',
+            },1000);
+        }
+        
+        });
 
     //q3
     $(".q3_header").click(function() {
         var width = $(".question_3").width();
-        
+        $(this).css("background-color", "#d97368");
+
         if (width === 200 ) {
             $(".question_3").animate({
                 width: '350px',
@@ -179,6 +243,7 @@ $(document).ready(function() {
     //q4
     $(".q4_header").click(function() {
         var width = $(".question_4").width();
+        $(this).css("background-color", "#d97368");
         
         if (width === 200 ) {
             $(".question_4").animate({
@@ -203,6 +268,7 @@ $(document).ready(function() {
      //q5
      $(".q5_header").click(function() {
         var width = $(".question_5").width();
+        $(this).css("background-color", "#d97368");
         
         if (width === 200 ) {
             $(".question_5").animate({
@@ -227,6 +293,7 @@ $(document).ready(function() {
      //q6
      $(".q6_header").click(function() {
         var width = $(".question_6").width();
+        $(this).css("background-color", "#d97368");
         
         if (width === 200 ) {
             $(".question_6").animate({
@@ -249,10 +316,11 @@ $(document).ready(function() {
         });
     //Services page code
     $(".service_1_header").click(function() {
+        //colour goes back to black when clicked
+        $(this).css("color", "black");
         //when service 1 header on banner is clicked
         //the opacity of the service text is found
         var current_opacity = $(".service_1_text").css("opacity");
-        console.log(current_opacity)
         //then it is checked if opacity is 0
         //if it is 0 then it is changed to 1
         //to make text visible
@@ -270,8 +338,8 @@ $(document).ready(function() {
     })
     
     $(".service_2_header").click(function() {
+        $(this).css("color", "black");
         var current_opacity = $(".service_2_text").css("opacity");
-        console.log(current_opacity)
 
         if (current_opacity === "0") {
             $(".service_2_text").show().animate({
@@ -285,8 +353,8 @@ $(document).ready(function() {
     })
 
     $(".service_3_header").click(function() {
+        $(this).css("color", "black");
         var current_opacity = $(".service_3_text").css("opacity");
-        console.log(current_opacity)
 
         if (current_opacity === "0") {
             $(".service_3_text").show().animate({
@@ -300,8 +368,8 @@ $(document).ready(function() {
     })
 
     $(".service_4_header").click(function() {
+        $(this).css("color", "black");
         var current_opacity = $(".service_4_text").css("opacity");
-        console.log(current_opacity)
 
         if (current_opacity === "0") {
             $(".service_4_text").show().animate({
@@ -316,7 +384,7 @@ $(document).ready(function() {
 
     $(".service_5_header").click(function() {
         var current_opacity = $(".service_5_text").css("opacity");
-        console.log(current_opacity)
+        $(this).css("color", "black");
 
         if (current_opacity === "0") {
             $(".service_5_text").show().animate({
@@ -373,5 +441,20 @@ $(document).ready(function() {
             $(this).css("color", "black");
         }
     );
+
+     //Contact us page code
+
+     $("#submit_button").click(function() {
+
+        const full_name = $("#full_name").val();
+        const email = $("#email").val();
+        const telephone_number = $("#telephone_number").val();
+        const subject = $("#subject").val();
+        const message = $("#message").val();
+
+        
+
+    })
     
 });
+
